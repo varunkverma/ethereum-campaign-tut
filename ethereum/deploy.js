@@ -1,6 +1,6 @@
 const HDWalletProvider = require("@truffle/hdwallet-provider");
 const Web3 = require("web3");
-require("dotenv").config({ path: "../.env" });
+require("dotenv").config({ path: ".env.local" });
 
 const compiledCampaignFactoryContract = require("./artifacts/CampaignFactory.json");
 

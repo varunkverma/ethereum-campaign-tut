@@ -95,6 +95,26 @@ contract Campaign {
         return address(this).balance;
     }
 
+    function getSummary()
+        public
+        view
+        returns (
+            uint256,
+            uint256,
+            uint256,
+            uint256,
+            address
+        )
+    {
+        return (
+            minimumContribution,
+            getTotalFunds(),
+            numOfRequests,
+            approversCount,
+            manager
+        );
+    }
+
     receive() external payable {
         require(
             msg.value >= minimumContribution,
